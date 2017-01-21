@@ -41,7 +41,7 @@ app_df %>% group_by(`Date Applied`) %>% summarise(count = n()) %>% mutate(cumsum
 ggplotly()
 
 # Cumsum each 
-app_df %>% group_by(`Date Applied`,Category) %>% summarise(count = n()) %>% ggplot(aes(x=`Date Applied`, y=count,color=Category)) +geom_line() +geom_point()+xlab("Date") + ylab("Number of Applications") + ggtitle("Applications by Day")  
+app_df %>% group_by(Category,`Date Applied`) %>% summarise(count = n()) %>% mutate(cumsum = cumsum(count))%>% ggplot(aes(x=`Date Applied`, y=cumsum,color=Category)) +geom_line() +geom_point()+xlab("Date") + ylab("Number of Applications") + ggtitle("Applications by Day")  
 ggplotly()
 
 
