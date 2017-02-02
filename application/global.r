@@ -10,5 +10,5 @@
 setwd("/Users/Bianbian/Documents/Courses/2016Fall/2016Careers/umm/Summary/application")
 
 googlesheets::gs_auth(token = "shiny_app_token.rds")
-sheet_key <- "1RA_gqvd3EQl_OQkvLOQDpIrnDZsXpCpNn7r6VRO7Yhs"
+sheet_key <- ##Enter your own sheet key here##
 ss <- googlesheets::gs_key(sheet_key)
